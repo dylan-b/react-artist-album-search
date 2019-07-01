@@ -1,0 +1,47 @@
+{
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "editor.detectIndentation": false,
+  "editor.formatOnSave": false,
+  "editor.tabSize": 2,
+  "emmet.syntaxProfiles": {
+    "vue": "html",
+    "vue-html": "html"
+  },
+  "eslint.alwaysShowStatus": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.enable": true,
+  "eslint.nodePath": "./node_modules",
+  "eslint.provideLintTask": true,
+  "eslint.validate": [
+    {
+      "autoFix": true,
+      "language": "vue"
+    },
+    {
+      "autoFix": true,
+      "language": "html"
+    },
+    {
+      "autoFix": true,
+      "language": "javascript"
+    },
+    {
+      "autoFix": true,
+      "language": "typescript"
+    }
+  ],
+  "eslint.workingDirectories": [
+    "./"
+  ],
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.over": "annotation",
+  "javascript.implicitProjectConfig.experimentalDecorators": true,
+  "workbench.iconTheme": "material-icon-theme"
+}
