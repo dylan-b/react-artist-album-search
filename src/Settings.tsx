@@ -3,14 +3,14 @@ import {
     Drawer
   } from '@material-ui/core';
 
-export default class Settings extends React.Component {
+  const Settings = () => {
 
-    render() {
-        return (
-            <div>
-                <Drawer>
-                </Drawer>
-            </div>
-        );
-    }
+    return (
+        <div>
+             <Drawer>
+            </Drawer>
+        </div>
+    );
 }
+
+export default Settings;
