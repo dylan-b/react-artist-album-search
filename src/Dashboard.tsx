@@ -1,5 +1,4 @@
 import * as React from 'react';
-import itunesAlbums from './itunesAlbums';
 import AlbumTile from './AlbumTile';
 import Grid from '@material-ui/core/Grid'
 import GridList from '@material-ui/core/GridList';
@@ -12,9 +11,9 @@ interface State {
 export default class Dashboard extends React.Component {
 
     state: State = {
-        albums: itunesAlbums.results
+        albums: []
     }
-    
+
     componentDidMount() {
         axios.get('http://itunes.apple.com/lookup?id=273058501&entity=album').then((res: any) => {
             const albums = res.data.results;
