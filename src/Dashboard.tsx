@@ -44,12 +44,15 @@ import axios from 'axios';
               <Container className={classes.cardGrid} maxWidth="md">
                 <Grid container spacing={4}>
                   {albums.map((album: any, index: number) => (
+                    album.artworkUrl100 &&
                     <Grid item key={index} xs={12} sm={6} md={4}>
                       <AlbumTile
                         imgUrl={album.artworkUrl100}
+                        albumUrl={album.collectionViewUrl}
+                        artistUrl={album.artistLinkUrl}
                         albumTitle={album.collectionName}
                         artist={album.artistName}
-                        explicit={false}
+                        advisoryRating={album.contentAdvisoryRating}
                       />
                     </Grid>
                   ))}
