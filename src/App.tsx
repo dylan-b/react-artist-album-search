@@ -3,10 +3,8 @@ import Dashboard from './Dashboard';
 
 import './App.css';
 
-export default class App extends React.Component {
-  render(){
-    return(
-      <Dashboard />
-    )
-  }
+const App = () => {
+  return(
+    <Dashboard />
+  )
 }
