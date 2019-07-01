@@ -6,8 +6,7 @@ import GridListTileBar from '@material-ui/core/GridListTileBar';
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     tile: {
-      height: 200,
-      width: 200
+      height: 200
     }
   }),
 );
