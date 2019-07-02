@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme: Theme) =>
       height: 70
     },
     icon: {
-      color: "red"
+      color: "#b71c1c"
     },
     expand: {
       transform: "rotate(0deg)",

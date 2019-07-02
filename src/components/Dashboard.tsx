@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
-import AlbumTile from "./AlbumCard";
+import AlbumCard from "./AlbumCard";
 import SettingsSidebar from "./SettingsSidebar";
 import { makeStyles, Theme } from "@material-ui/core/styles";
 import {
@@ -41,10 +41,11 @@ const Dashboard = () => {
   const classes = useStyles();
 
   const [artistId] = useState("273058501"); // Kid Cudi Artist ID
-  const [itunesSearchApiUrl] = useState("http://itunes.apple.com/lookup?id=" + artistId + "&entity=album&");
   const [albums, setAlbums] = useState([]);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [showExplicit, setShowExplicit] = useState(true);
+
+  const itunesSearchApiUrl = "http://itunes.apple.com/lookup?id=" + artistId + "&entity=album&origin=*";
 
   const handleToggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -64,7 +65,7 @@ const Dashboard = () => {
         });
     } catch (error) {
       console.log(error);
-    }
+      }
   });
 
   return (
@@ -99,12 +100,11 @@ const Dashboard = () => {
                 {albums.map(
                   (album: any, index: number) =>
                     // Checks if showExplicit is true or only shows clean albums
-                    // Also checks if album artwork is available
                     (showExplicit ||
                       (album.contentAdvisoryRating === "Clean" &&
-                        !showExplicit)) && album.artworkUrl100 && (
+                        !showExplicit)) && album.collectionType && (
                       <Grid item key={index} xs={12} sm={6} md={4}>
-                        <AlbumTile
+                        <AlbumCard
                           imgUrl={album.artworkUrl100}
                           albumUrl={album.collectionViewUrl}
                           artistUrl={album.artistViewUrl}
