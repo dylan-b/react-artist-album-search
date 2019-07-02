@@ -4,7 +4,7 @@ This is a very simple React.js project that displays the albums for an artist. T
 
 ## Getting Started
 
-To get the project running just clone down the project and run npm install. Then run npm start to run the project.
+To get the project running just clone down the project and run npm install Then run npm start to run the project.
 
 ### Prerequisites
 
@@ -20,7 +20,3 @@ To run the project you need to have node.js and npm installed.
 ## Authors
 
 * **Dylan Bertram** [dylan-b](https://github.com/dylan-b)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
